@@ -4,10 +4,5 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
-    url(r'^(?P<incidencies_id>[0-9]+)/$', views.detail, name='detail'),
-    # ex: /polls/5/results/
-    url(r'^(?P<incidencies_id>[0-9]+)/results/$', views.results, name='results'),
-    # ex: /polls/5/vote/
-    url(r'^(?P<incidencies_id>[0-9]+)/vote/$', views.vote, name='vote'),
-    url(r'^compres/', views.CompresCreateView.as_view(success_url="/index") ),
+    url(r'^compres/', views.CompresCreateView.as_view(success_url="fet"), name="compres" ),
 ]

@@ -122,7 +122,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-LOGIN_REDIRECT_URL=reverse_lazy('index')
+LOGIN_REDIRECT_URL=reverse_lazy('compres')
 
 ACCOUNT_ACTIVATION_DAYS=365
 EMAIL_HOST = 'localhost'

@@ -22,5 +22,4 @@ urlpatterns = [
     url(r'^CoInf/', include('CoInf.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include('registration.urls')),
-    url(r'^compres/', views.CompresCreateView.as_view(success_url="fet") ),
 ]
