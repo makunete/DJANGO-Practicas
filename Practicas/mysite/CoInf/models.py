@@ -55,6 +55,7 @@ class Compres(models.Model):
 	departament=models.ManyToManyField(Departaments)
 	material=models.ForeignKey(Material,default='')
 	quantitat=models.IntegerField(default=1)
+	pressupost=models.IntegerField(default=0)
 	
 	def __str__(self):
 		return str(self.numero)
