@@ -29,7 +29,7 @@ class Incidencies(models.Model):
 	"""departament=models.ForeignKey(Departaments)"""
 	nom=models.CharField(max_length=50, default='')
 	departament=models.ManyToManyField(Departaments)
-	estat=models.CharField(max_length=20)
+	estat=models.CharField(max_length=20, default='oberta')
 	descripcion=models.CharField(max_length=200,default='')
 	
 	def __str__(self):

@@ -1,0 +1,24 @@
+<!-- vota view -->
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<h2>Incidencies</h2>
+
+<ol>
+{% for incidencies in incidencies_list %}
+	<li>
+		{{incidencies.nom}} - {{incidencies.departament}} - {{incidencies.estat}} - {{incidencies.descripcion}}
+
+	</li>
+
+		
+{% empty %}
+	<li>No hi ha cap compra</li>
+{% endfor %}
+</ol>
+
+<button type="button" onclick="location.href='/CoInf/incidencies'">Return</button>
+
+{% endblock %}

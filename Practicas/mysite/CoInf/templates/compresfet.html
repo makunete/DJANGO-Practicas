@@ -1,0 +1,26 @@
+<!-- vota view -->
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<h2>Compres</h2>
+
+<ol>
+{% for compres in compres_list %}
+	<li>
+		{{compres.numero}} - {{compres.departament}} - {{compres.material}} - {{compres.quantitat}} - {{compres.pressupost}}
+
+	</li>
+
+		
+{% empty %}
+	<li>No hi ha cap compra</li>
+{% endfor %}
+</ol>
+
+<button type="button" onclick="location.href='/CoInf/compres'">Return</button>
+
+{% endblock %}
+ 
+

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic.edit import CreateView
+from django.views.generic.list import ListView
 
 from CoInf.models import *
 
@@ -15,6 +16,30 @@ class CompresCreateView(CreateView):
 	template_name = "compres.html"
 	fields = ['numero','departament','material','quantitat','pressupost']
 
+class IncidenciesCreateView(CreateView):
+	model = Incidencies
+	# indiquem la plantilla personalitzada i els camps que han d'apareixer al formulari
+	# veureu que la plantilla es molt senzilla ja que fa tot el formulari amb {{form.as_p}}
+	template_name = "incidencies.html"
+	fields = ['nom','departament','estat','descripcion']
+
+class CompresListView(ListView):
+	model = Compres
+	template_name = "compresfet.html"
+	# si no posem template_name agafara per defecte karaoke/item_list.html
+	def get_queryset(self):
+		# nomes posem els items que estiguin per cantar
+		return Compres.objects.all()
+		#.filter(fet=False)
+
+class IncidenciesListView(ListView):
+	model = Incidencies
+	template_name = "incidenciesfet.html"
+	# si no posem template_name agafara per defecte karaoke/item_list.html
+	def get_queryset(self):
+		# nomes posem els items que estiguin per cantar
+		return Incidencies.objects.all()
+		#.filter(fet=False)
 
 
 def detail(request, question_id):
