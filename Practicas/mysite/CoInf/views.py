@@ -41,6 +41,13 @@ class IncidenciesListView(ListView):
 		return Incidencies.objects.all()
 		#.filter(fet=False)
 
+class IncidenciesDescListView(ListView):
+	model = Incidencies
+	template_name = "incidenciesdescription.html"
+	# si no posem template_name agafara per defecte karaoke/item_list.html
+	def get_queryset(self):
+		# nomes posem els items que estiguin per cantar
+		return Incidencies.objects.all()
 
 def detail(request, question_id):
     return HttpResponse("You're looking at incidence %s." % incidencies_id)

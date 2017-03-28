@@ -4,18 +4,15 @@
 
 {% block content %}
 
-<h2>Incidencies</h2>
+<h2>INCIDENCIES</h2>
 
 <ol>
 {% for incidencies in incidencies_list %}
-	<li>
-		{{incidencies.nom}} - {{incidencies.departament}} - {{incidencies.estat}} - {{incidencies.descripcion}}
-
-	</li>
-
+	
+	<li>{{incidencies.nom}} - <a title="{{incidencies.nom}}" href="/CoInf/Indesc/{{incidencies.id}}">{{incidencies.estat}}</a></li>
 		
 {% empty %}
-	<li>No hi ha cap compra</li>
+	<li>No hi ha cap incidencia</li>
 {% endfor %}
 </ol>
 

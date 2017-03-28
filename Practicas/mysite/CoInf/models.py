@@ -5,8 +5,8 @@ from datetime import datetime
 
 class Departaments(models.Model):
 	"""docstring for Missatges"""
-	nom=models.CharField(max_length=20)
-	email=models.CharField(max_length=20)
+	nom=models.CharField(max_length=20,default='')
+	email=models.CharField(max_length=20,default='')
 	"""incidencia=models.CharField(max_length=120)"""
 	"""usuaris=models.ManyToManyField(Usuaris)"""
 	def __str__(self):
