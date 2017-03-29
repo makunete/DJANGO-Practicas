@@ -2,7 +2,8 @@
 {% load i18n %}
 
 {% block content %}
-<h2>COMPRA</h2>
+<div class="container register">
+<h2>COMPRA</h2><br/>
 <form method="post" action=".">
   {% csrf_token %}
   {{ form.as_p }}
@@ -11,4 +12,5 @@
 
 </form>
 <button type="button" onclick="location.href='/CoInf/incidencies'">Incidencies</button>
+</div>
 {% endblock %}

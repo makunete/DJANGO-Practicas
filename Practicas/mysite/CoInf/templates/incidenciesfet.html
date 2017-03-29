@@ -3,13 +3,13 @@
 
 
 {% block content %}
-
+<div class="container register">
 <h2>INCIDENCIES</h2>
 
 <ol>
 {% for incidencies in incidencies_list %}
 	
-	<li>{{incidencies.nom}} - <a title="{{incidencies.nom}}" href="/CoInf/Indesc/{{incidencies.id}}">{{incidencies.estat}}</a></li>
+	<li>{{incidencies.departament}}-{{incidencies.nom}} - <a title="{{incidencies.nom}}" href="/CoInf/Indesc/{{incidencies.id}}">{{incidencies.estat}}</a></li>
 		
 {% empty %}
 	<li>No hi ha cap incidencia</li>
@@ -17,5 +17,5 @@
 </ol>
 
 <button type="button" onclick="location.href='/CoInf/incidencies'">Return</button>
-
+</div>
 {% endblock %}
