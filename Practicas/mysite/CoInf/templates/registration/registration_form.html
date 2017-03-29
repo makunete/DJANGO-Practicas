@@ -2,6 +2,7 @@
 {% load i18n %}
 
 {% block content %}
+<div class="container register">
 <h1>REGISTER</h1>
 <form method="post" action=".">
   {% csrf_token %}
@@ -9,4 +10,5 @@
 
   <input type="submit" value="{% trans 'Submit' %}" />
 </form>
+</div>
 {% endblock %}
