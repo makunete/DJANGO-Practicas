@@ -16,7 +16,7 @@ class Usuaris(models.Model):
 	"""docstring for Login"""
 	nom=models.CharField(max_length=20)
 	cognoms=models.CharField(max_length=20)
-	email=models.CharField(max_length=20)
+	email=models.CharField(max_length=30)
 	tipus=models.CharField(max_length=20)
 	departament=models.ManyToManyField(Departaments)
 	contrasenya=models.CharField(max_length=64)
