@@ -14,7 +14,7 @@ class CompresCreateView(CreateView):
 	# indiquem la plantilla personalitzada i els camps que han d'apareixer al formulari
 	# veureu que la plantilla es molt senzilla ja que fa tot el formulari amb {{form.as_p}}
 	template_name = "compres.html"
-	fields = ['numero','departament','material','quantitat','pressupost']
+	fields = ['departament','material','quantitat','pressupost']
 
 class IncidenciesCreateView(CreateView):
 	model = Incidencies

@@ -30,7 +30,7 @@ class Incidencies(models.Model):
 	nom=models.CharField(max_length=50, default='')
 	departament=models.ManyToManyField(Departaments)
 	estat=models.CharField(max_length=20, default='oberta')
-	descripcion=models.CharField(max_length=200,default='')
+	descripcion=models.TextField(max_length=400,default='')
 	
 	def __str__(self):
 		return self.nom
@@ -50,7 +50,6 @@ class Material(models.Model):
 class Compres(models.Model):
 	"""docstring for Hashtags"""
 	"""identificador=models.IntegerField(default=0)"""
-	numero=models.IntegerField(default=0)
 	"""departament=models.ForeignKey(Departaments)"""
 	departament=models.ManyToManyField(Departaments)
 	material=models.ForeignKey(Material,default='')

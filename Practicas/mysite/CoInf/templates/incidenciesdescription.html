@@ -7,11 +7,11 @@
 
 <ol>
 {% for incidencies in incidencies_list %}
-	
-	<li>{{incidencies.descripcion}}</li>
-		
-{% empty %}
-	<li>No hi ha cap incidencia</li>
+
+	{% if incidencies.id|slugify in request.path %}
+		<li>{{ incidencies.descripcion }}</li>
+	{% endif %}	
+
 {% endfor %}
 </ol>
 

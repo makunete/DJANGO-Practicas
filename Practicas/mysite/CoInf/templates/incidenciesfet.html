@@ -8,9 +8,10 @@
 
 <ol>
 {% for incidencies in incidencies_list %}
+{% for departaments in incidencies.departament.all %}
 	
-	<li>{{incidencies.departament}}-{{incidencies.nom}} - <a title="{{incidencies.nom}}" href="/CoInf/Indesc/{{incidencies.id}}">{{incidencies.estat}}</a></li>
-		
+	<li>{{departaments}}-{{incidencies.nom}} - <a title="{{incidencies.nom}}" href="/CoInf/Indesc/{{incidencies.id}}">{{incidencies.estat}}</a></li>
+{% endfor %}		
 {% empty %}
 	<li>No hi ha cap incidencia</li>
 {% endfor %}

@@ -8,12 +8,13 @@
 
 <ol>
 {% for compres in compres_list %}
+{% for departaments in compres.departament.all %}
 	<li>
-		{{compres.numero}} - {{compres.departament}} - {{compres.material}} - {{compres.quantitat}} - {{compres.pressupost}}
+		{{departaments}} - {{compres.material}} - {{compres.quantitat}} - {{compres.pressupost}}
 
 	</li>
 
-		
+{% endfor %}		
 {% empty %}
 	<li>No hi ha cap compra</li>
 {% endfor %}
